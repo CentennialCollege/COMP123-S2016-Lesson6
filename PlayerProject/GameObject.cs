@@ -7,32 +7,40 @@ namespace PlayerProject
 {
     public abstract class GameObject
     {
-        public GameObject()
+        private int _attack;
+        private int _defense;
+        private int _lives;
+        private string _name;
+        private int _speed;
+
+        public GameObject(string name)
         {
-            throw new System.NotImplementedException();
+            this.Name = name;
         }
 
         public int Lives
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this._lives;
             }
 
             set
             {
+                this._lives = value;
             }
         }
 
-        public int Name
+        public string Name
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this._name;
             }
 
             set
             {
+                this._name = value;
             }
         }
 
@@ -40,54 +48,69 @@ namespace PlayerProject
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this._speed;
             }
 
             set
             {
+                this._speed = value;
             }
         }
 
-        public int Strength
+        public int Attack
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this._attack;
             }
 
             set
             {
+                this._attack = value;
+            }
+        }
+
+        public int Defense
+        {
+            get
+            {
+                return this._defense;
+            }
+
+            set
+            {
+                this._defense = value;
             }
         }
 
         public void MoveRight()
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine("{0} is moving right",this.Name);
         }
 
         public void MoveLeft()
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine("{0} is moving left", this.Name);
         }
 
         public void MoveForward()
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine("{0} is moving forward", this.Name);
         }
 
         public void MoveBack()
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine("{0} is moving back", this.Name);
         }
 
         public void TurnLeft()
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine("{0} is turning left", this.Name);
         }
 
         public void TurnRight()
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine("{0} is turning right", this.Name);
         }
     }
 }

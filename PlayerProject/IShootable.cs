@@ -7,5 +7,6 @@ namespace PlayerProject
 {
     public interface IShootable
     {
+        void Shoot();
     }
 }

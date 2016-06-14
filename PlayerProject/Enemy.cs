@@ -7,14 +7,40 @@ namespace PlayerProject
 {
     public abstract class Enemy : GameObject
     {
+        private int _morale;
+
+        public Enemy(string name)
+            :base(name)
+        {
+            
+        }
+
+        public int Morale
+        {
+            get
+            {
+                return this._morale;
+            }
+
+            set
+            {
+                this._morale = value;
+            }
+        }
+
         public void Seek()
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine("{0} is seeking", this.Name);
         }
 
         public void Flee()
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine("{0} is fleeing", this.Name);
+        }
+
+        public void Patrol()
+        {
+            Console.WriteLine("{0} is patroling", this.Name);
         }
     }
 }
