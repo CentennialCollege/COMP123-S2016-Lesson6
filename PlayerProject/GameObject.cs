@@ -13,7 +13,7 @@ namespace PlayerProject
         private int _lives;
         private string _name;
         private int _speed;
-        private float _direction; // angle in degrees
+        private double _direction; // angle in degrees
         private Vector2 _position; // position in 2-dimensional space
         private Vector2 _facing;   // where the game object is looking at in 2-dimensional space
 
@@ -109,7 +109,7 @@ namespace PlayerProject
             }
         }
 
-        public float Direction
+        public double Direction
         {
             get
             {
@@ -138,11 +138,26 @@ namespace PlayerProject
             this.Defense = 0;
             this.Lives = 0;
             this.Speed = 0;
-            this.Direction = 0f;
+            this.Direction = this._calculateTargetAngle();
             this.Position = new Vector2();
             this.Facing = new Vector2();
         }
 
+        /**
+         * <summary>
+         * This utitlity method calculates the direction between two vectors
+         * </summary>
+         */
+        private double _calculateTargetAngle()
+        {
+            float dx = this.Position.x - this.Facing.x;
+            float dy = this.Position.y - this.Facing.y;
+
+            double radians = Math.Atan2(dy, dx);
+            double targetAngle = radians * 180 / Math.PI;
+
+            return targetAngle;
+        }
 
         // PUBLIC METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
