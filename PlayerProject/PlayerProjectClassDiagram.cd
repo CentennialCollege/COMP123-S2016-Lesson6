@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="PlayerProject.GameObject">
-    <Position X="0.5" Y="1.5" Width="2" />
+    <Position X="0.5" Y="2" Width="3.25" />
     <TypeIdentifier>
       <HashCode>ABAAIAEAACASAAAkACAAAQQBAIEQAkEKRAAIggAAAEA=</HashCode>
       <FileName>GameObject.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PlayerProject.Player">
-    <Position X="3" Y="1.25" Width="1.75" />
+    <Position X="4.5" Y="2" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAIBggAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Player.cs</FileName>
@@ -16,14 +16,14 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="PlayerProject.Enemy">
-    <Position X="3" Y="4" Width="2" />
+    <Position X="4.5" Y="4.75" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAACAAAAAAgAAAAAAAAgAAARAAAAAA=</HashCode>
       <FileName>Enemy.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PlayerProject.ShootingEnemy">
-    <Position X="5.5" Y="3.25" Width="2.25" />
+    <Position X="7" Y="4" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAIBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ShootingEnemy.cs</FileName>
@@ -31,7 +31,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="PlayerProject.TouchingEnemy">
-    <Position X="5.5" Y="5.5" Width="2.25" />
+    <Position X="7" Y="6.25" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>TouchingEnemy.cs</FileName>
@@ -39,28 +39,28 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="PlayerProject.Program">
-    <Position X="3" Y="7" Width="2.5" />
+    <Position X="7" Y="2" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PlayerProject.Vector2">
-    <Position X="9.25" Y="2.25" Width="2" />
+    <Position X="10" Y="2" Width="3.25" />
     <TypeIdentifier>
-      <HashCode>ACCCABAJAAQAAAAAAAAAAAAAEQAAAAAAAABgAAABAAQ=</HashCode>
+      <HashCode>ACCCABAJAAQAAAAAAAAAAAAAEQAAAAAAAABgAAEBAAQ=</HashCode>
       <FileName>Vector2.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="PlayerProject.IShootable">
-    <Position X="5.5" Y="0.5" Width="1.5" />
+    <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IShootable.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="PlayerProject.ITouchable">
-    <Position X="7.5" Y="0.5" Width="1.5" />
+    <Position X="2.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ITouchable.cs</FileName>

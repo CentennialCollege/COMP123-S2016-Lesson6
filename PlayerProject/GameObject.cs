@@ -165,7 +165,9 @@ namespace PlayerProject
         // PUBLIC METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         public override string ToString()
         {
-            string returnString = "Attack: " + this.Attack + "\n";
+            string returnString = "++++++++++++++++++++++++++++++++++\n";
+            returnString += "Type: " + this.GetType().Name + "\n";
+            returnString += "Attack: " + this.Attack + "\n";
             returnString += "Defense: " + this.Defense + "\n";
             returnString += "Name: " + this.Name + "\n";
             returnString += "Lives: " + this.Lives + "\n";
@@ -175,6 +177,7 @@ namespace PlayerProject
             returnString += "Facing.x: " + this.Facing.x + "\n";
             returnString += "Facing.y: " + this.Facing.y + "\n";
             returnString += "Direction: " + this.Direction + "\n";
+            returnString += "++++++++++++++++++++++++++++++++++\n";
 
             return returnString;
         }
