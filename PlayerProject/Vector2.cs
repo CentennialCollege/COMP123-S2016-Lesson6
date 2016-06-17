@@ -27,7 +27,6 @@ namespace PlayerProject
         // PRIVATE INSTANCE VARIABLES (FIELDS) +++++++++++++++++++++++++++++++++++++++++
         private float _x;
         private float _y;
-
        
         // PUBLIC PROPERTIES ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         public float x
@@ -75,10 +74,82 @@ namespace PlayerProject
         }
 
         // PUBLIC METHODS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-        public void Zero()
+        public Vector2 Zero()
         {
             this.x = 0f;
             this.y = 0f;
+
+            return new Vector2(this.x, this.y);
+        }
+
+        public Vector2 East(float magnitude = 1)
+        {
+            this.x = magnitude;
+            this.y = 0f;
+
+            return new Vector2(this.x, this.y);
+        }
+
+        public Vector2 NorthEast(float magnitude = 1)
+        {
+            this.x = magnitude;
+            this.y = -magnitude;
+
+            return new Vector2(this.x, this.y);
+        }
+
+        public Vector2 North(float magnitude = 1)
+        {
+            this.x = 0f;
+            this.y = -magnitude;
+
+            return new Vector2(this.x, this.y);
+        }
+
+        public Vector2 NorthWest(float magnitude = 1)
+        {
+            this.x = -magnitude;
+            this.y = -magnitude;
+
+            return new Vector2(this.x, this.y);
+        }
+
+        public Vector2 West(float magnitude = 1)
+        {
+            this.x = -magnitude;
+            this.y = 0f;
+
+            return new Vector2(this.x, this.y);
+        }
+
+        public Vector2 SouthWest(float magnitude = 1)
+        {
+            this.x = -magnitude;
+            this.y = magnitude;
+
+            return new Vector2(this.x, this.y);
+        }
+
+        public Vector2 South(float magnitude = 1)
+        {
+            this.x = 0f;
+            this.y = magnitude;
+
+            return new Vector2(this.x, this.y);
+        }
+
+        public Vector2 SouthEast(float magnitude = 1)
+        {
+            this.x = magnitude;
+            this.y = magnitude;
+
+            return new Vector2(this.x, this.y);
+        }
+
+        public float Magnitude(Vector2 first, Vector2 second)
+        {
+            float magnitude = Convert.ToSingle(Math.Sqrt(Math.Pow(second.x - first.x,2) + Math.Pow(second.y - first.y,2)));
+            return magnitude;
         }
     }
 }

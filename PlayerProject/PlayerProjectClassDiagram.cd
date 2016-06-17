@@ -3,7 +3,7 @@
   <Class Name="PlayerProject.GameObject">
     <Position X="0.5" Y="1.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>ABAAIAAAAAASAAAgACAAAQQBAIEAAEEKRAAIggAAAEA=</HashCode>
+      <HashCode>ABAAIAEAACASAAAkACAAAQQBAIEQAkEKRAAIggAAAEA=</HashCode>
       <FileName>GameObject.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -39,7 +39,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="PlayerProject.Program">
-    <Position X="0.5" Y="8.25" Width="2.5" />
+    <Position X="3" Y="7" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
@@ -48,7 +48,7 @@
   <Class Name="PlayerProject.Vector2">
     <Position X="9.25" Y="2.25" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAIAAQAAAAAAAAAAAAAAQAAAAAAAABgAAAAAAA=</HashCode>
+      <HashCode>ACCCABAJAAQAAAAAAAAAAAAAEQAAAAAAAABgAAABAAQ=</HashCode>
       <FileName>Vector2.cs</FileName>
     </TypeIdentifier>
   </Class>

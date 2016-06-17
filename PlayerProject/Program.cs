@@ -20,11 +20,9 @@ namespace PlayerProject
         {
             Player greenPlayer = new PlayerProject.Player("green");
 
-            greenPlayer.MoveForward();
+            greenPlayer.SetFacing(new Vector2().North(10));
 
-            TouchingEnemy redEnemy = new TouchingEnemy("red");
-
-            redEnemy.MoveForward();
+            Console.WriteLine(greenPlayer.ToString());
 
 
             WaitForAnyKey();

@@ -13,7 +13,7 @@ namespace PlayerProject
         private int _lives;
         private string _name;
         private int _speed;
-        private double _direction; // angle in degrees
+        private float _direction; // angle in degrees
         private Vector2 _position; // position in 2-dimensional space
         private Vector2 _facing;   // where the game object is looking at in 2-dimensional space
 
@@ -109,7 +109,7 @@ namespace PlayerProject
             }
         }
 
-        public double Direction
+        public float Direction
         {
             get
             {
@@ -138,9 +138,10 @@ namespace PlayerProject
             this.Defense = 0;
             this.Lives = 0;
             this.Speed = 0;
-            this.Direction = this._calculateTargetAngle();
+
             this.Position = new Vector2();
             this.Facing = new Vector2();
+            this.Direction = this._calculateTargetAngle();
         }
 
         /**
@@ -148,19 +149,47 @@ namespace PlayerProject
          * This utitlity method calculates the direction between two vectors
          * </summary>
          */
-        private double _calculateTargetAngle()
+        private float _calculateTargetAngle()
         {
             float dx = this.Position.x - this.Facing.x;
             float dy = this.Position.y - this.Facing.y;
+            dy = -dy;
 
             double radians = Math.Atan2(dy, dx);
-            double targetAngle = radians * 180 / Math.PI;
+            float targetAngle = Convert.ToSingle(radians * 180 / Math.PI); // angle in degrees
+            targetAngle += 180f;
 
             return targetAngle;
         }
 
         // PUBLIC METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        public override string ToString()
+        {
+            string returnString = "Attack: " + this.Attack + "\n";
+            returnString += "Defense: " + this.Defense + "\n";
+            returnString += "Name: " + this.Name + "\n";
+            returnString += "Lives: " + this.Lives + "\n";
+            returnString += "Speed: " + this.Speed + "\n";
+            returnString += "Position.x: " + this.Position.x + "\n";
+            returnString += "Position.y: " + this.Position.y + "\n";
+            returnString += "Facing.x: " + this.Facing.x + "\n";
+            returnString += "Facing.y: " + this.Facing.y + "\n";
+            returnString += "Direction: " + this.Direction + "\n";
 
+            return returnString;
+        }
+
+        public void SetPosition(Vector2 newPosition)
+        {
+            this.Position = newPosition;
+            this.Direction = this._calculateTargetAngle();
+        }
+
+        public void SetFacing(Vector2 newFacing)
+        {
+            this.Facing = newFacing;
+            this.Direction = this._calculateTargetAngle();
+        }
 
         public void MoveRight()
         {
