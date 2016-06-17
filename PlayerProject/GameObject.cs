@@ -7,17 +7,17 @@ namespace PlayerProject
 {
     public abstract class GameObject
     {
+        // PRIVATE INSTANCE VARIABLES (FIELDS) +++++++++++++++++++++++++++++++++++++++++++++
         private int _attack;
         private int _defense;
         private int _lives;
         private string _name;
         private int _speed;
+        private float _direction; // angle in degrees
+        private Vector2 _position; // position in 2-dimensional space
+        private Vector2 _facing;   // where the game object is looking at in 2-dimensional space
 
-        public GameObject(string name)
-        {
-            this.Name = name;
-        }
-
+        // PUBLIC PROPERTIES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         public int Lives
         {
             get
@@ -82,6 +82,70 @@ namespace PlayerProject
                 this._defense = value;
             }
         }
+
+        public Vector2 Position
+        {
+            get
+            {
+                return this._position;
+            }
+
+            set
+            {
+                this._position = value;
+            }
+        }
+
+        public Vector2 Facing
+        {
+            get
+            {
+                return this._facing;
+            }
+
+            set
+            {
+                this._facing = value;
+            }
+        }
+
+        public float Direction
+        {
+            get
+            {
+                return this._direction;
+            }
+
+            set
+            {
+                this._direction = value;
+            }
+        }
+
+        // CONSTRUCTORS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        public GameObject(string name)
+        {
+            this.Name = name;
+
+            this._initialize();
+        }
+
+
+        // PRIVATE METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        private void _initialize()
+        {
+            this.Attack = 0;
+            this.Defense = 0;
+            this.Lives = 0;
+            this.Speed = 0;
+            this.Direction = 0f;
+            this.Position = new Vector2();
+            this.Facing = new Vector2();
+        }
+
+
+        // PUBLIC METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 
         public void MoveRight()
         {
