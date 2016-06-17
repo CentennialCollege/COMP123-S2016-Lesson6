@@ -151,5 +151,10 @@ namespace PlayerProject
             float magnitude = Convert.ToSingle(Math.Sqrt(Math.Pow(second.x - first.x,2) + Math.Pow(second.y - first.y,2)));
             return magnitude;
         }
+
+        public override string ToString()
+        {
+            return String.Format("({0},{1})",this.x, this.y);
+        }
     }
 }
