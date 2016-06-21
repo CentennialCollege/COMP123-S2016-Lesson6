@@ -16,6 +16,7 @@ namespace PlayerProject
         private float _direction; // angle in degrees
         private Vector2 _position; // position in 2-dimensional space
         private Vector2 _facing;   // where the game object is looking at in 2-dimensional space
+        private Grid _grid; // represents the active grid
 
         // PUBLIC PROPERTIES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         public int Lives
@@ -122,10 +123,24 @@ namespace PlayerProject
             }
         }
 
+        public Grid grid
+        {
+            get
+            {
+                return this._grid;
+            }
+
+            set
+            {
+                this._grid = value;
+            }
+        }
+
         // CONSTRUCTORS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-        public GameObject(string name)
+        public GameObject(string name, Grid grid)
         {
             this.Name = name;
+            this.grid = grid;
 
             this._initialize();
         }
@@ -194,24 +209,32 @@ namespace PlayerProject
             this.Direction = this._calculateTargetAngle();
         }
 
-        public void MoveRight()
+        public void MoveRight(int magnitude = 1)
         {
             Console.WriteLine("{0} is moving right",this.Name);
+            this.grid.MoveChild(this, (this.Position + new Vector2().East(magnitude)));
+            this.Position += new Vector2().East(magnitude);
         }
 
-        public void MoveLeft()
+        public void MoveLeft(int magnitude = 1)
         {
             Console.WriteLine("{0} is moving left", this.Name);
+            this.grid.MoveChild(this, (this.Position + new Vector2().West(magnitude)));
+            this.Position += new Vector2().West(magnitude);
         }
 
-        public void MoveForward()
+        public void MoveForward(int magnitude = 1)
         {
             Console.WriteLine("{0} is moving forward", this.Name);
+            this.grid.MoveChild(this, (this.Position + new Vector2().North(magnitude)));
+            this.Position += new Vector2().North(magnitude);
         }
 
-        public void MoveBack()
+        public void MoveBack(int magnitude = 1)
         {
             Console.WriteLine("{0} is moving back", this.Name);
+            this.grid.MoveChild(this, (this.Position + new Vector2().South(magnitude)));
+            this.Position += new Vector2().South(magnitude);
         }
 
         public void TurnLeft()

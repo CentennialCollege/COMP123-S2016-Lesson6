@@ -18,19 +18,29 @@ namespace PlayerProject
     {
         public static void Main(string[] args)
         {
-            TouchingEnemy redEnemy = new TouchingEnemy("red");
-            redEnemy.SetPosition(new Vector2().NorthEast(20));
+            Grid grid = new Grid(15, 15);
+
+            TouchingEnemy redEnemy = new TouchingEnemy("red", grid);
+            redEnemy.SetPosition(new Vector2().SouthEast(5));
             redEnemy.SetFacing(new Vector2().Zero());
             Console.WriteLine(redEnemy.ToString());
+            grid.AddChild(redEnemy);
 
-            Player greenPlayer = new PlayerProject.Player("green");
+            Player greenPlayer = new PlayerProject.Player("green", grid);
+            greenPlayer.SetPosition(new Vector2(1, 1));
             greenPlayer.SetFacing(redEnemy.Position);
             Console.WriteLine(greenPlayer.ToString());
+            grid.AddChild(greenPlayer);
 
             float distance = new Vector2().Magnitude(greenPlayer.Position, redEnemy.Position);
 
-            Console.WriteLine("Distance between Player and Enemy: " + distance);
+            Console.WriteLine("Distance between Player and Enemy: " + distance + "\n");
 
+            greenPlayer.MoveRight(5);
+            greenPlayer.MoveBack(5);
+            greenPlayer.MoveLeft(3);
+            greenPlayer.MoveForward(6);
+            Console.WriteLine(grid.ToString());
 
             WaitForAnyKey();
         }

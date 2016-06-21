@@ -9,10 +9,10 @@ namespace PlayerProject
     {
         private int _morale;
 
-        public Enemy(string name)
-            :base(name)
+        public Enemy(string name, Grid grid)
+            :base(name, grid)
         {
-            
+
         }
 
         public int Morale

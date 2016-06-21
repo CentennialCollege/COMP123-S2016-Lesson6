@@ -7,8 +7,8 @@ namespace PlayerProject
 {
     public class TouchingEnemy : Enemy, ITouchable
     {
-        public TouchingEnemy(string name)
-            :base(name)
+        public TouchingEnemy(string name, Grid grid)
+            :base(name, grid)
         {
            
         }

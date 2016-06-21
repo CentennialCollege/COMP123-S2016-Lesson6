@@ -48,8 +48,15 @@
   <Class Name="PlayerProject.Vector2">
     <Position X="10" Y="2" Width="3.25" />
     <TypeIdentifier>
-      <HashCode>ACCCABAJAAQAAAAAAAAAAAAAEQAAAAAAAABgAAEBAAQ=</HashCode>
+      <HashCode>ACCCABAJAAQAAAAEQAEAAAAAEQAAAAAAAABgAAEBAiQ=</HashCode>
       <FileName>Vector2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerProject.Grid">
+    <Position X="4.75" Y="8.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABACAAAAEAAAAAEAAABAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Grid.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="PlayerProject.IShootable">

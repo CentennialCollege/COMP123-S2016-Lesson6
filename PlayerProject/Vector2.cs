@@ -73,6 +73,29 @@ namespace PlayerProject
             this.y = y;
         }
 
+
+        // OVERLOADED OPERATORS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+        public static Vector2 operator+(Vector2 first, Vector2 second)
+        {
+            return new Vector2(first.x + second.x, first.y + second.y);
+        } 
+
+        public static Vector2 operator-(Vector2 first, Vector2 second)
+        {
+            return new Vector2(first.x - second.x, first.y - second.y);
+        }
+
+        public static bool operator==(Vector2 first, Vector2 second)
+        {
+            return ((first.x == second.x) && (first.y == second.y));
+        }
+
+        public static bool operator!=(Vector2 first, Vector2 second)
+        {
+            return ((first.x != second.x) || (first.y != second.y));
+        }
+
         // PUBLIC METHODS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         public Vector2 Zero()
         {

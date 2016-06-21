@@ -9,8 +9,8 @@ namespace PlayerProject
     {
         private int _score;
 
-        public Player(string name)
-            :base(name)
+        public Player(string name, Grid grid)
+            :base(name, grid)
         {
            
         }
